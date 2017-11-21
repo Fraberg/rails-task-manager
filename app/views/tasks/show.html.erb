@@ -1,0 +1,10 @@
+<h1><%= @task.title %></h1>
+<h3 style ="background-color: rgba(200, 200, 200, 0.7)"><%= @task.details %></h3>
+
+
+<p><input id="checkBox" type="checkbox" <%= @task.completed == true ? "checked" : "" %>>This tasks is <%= @task.completed == true ? "not yet" : "" %>completed</p>
+
+<p><i class="fa fa-undo" aria-hidden="true"></i><%= link_to " Back to list", tasks_path %></p>
+
+<p><i class="fa fa-pencil" aria-hidden="true"></i></i><%= link_to " Edit this task", edit_task_path %></p>
+
